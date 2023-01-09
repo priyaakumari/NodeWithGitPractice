@@ -2,6 +2,11 @@ const express= require('express');
 const app=express();
 const port=8000;
 
+// require express-ejs-layouts
+const expressLayouts= require('express-ejs-layouts');
+
+// use express-ejs-layouts
+app.use(expressLayouts);
 
 //use express router
 app.use('/',require('./routes'));       //or we can write app.use('/',require('./routes/index.js')); both will go to index of routes
