@@ -5,6 +5,14 @@ const port=8000;
 // require express-ejs-layouts
 const expressLayouts= require('express-ejs-layouts');
 
+//  use assets folder
+app.use(express.static('./assets'));
+
+
+// extract style and script from sub pages into the layout
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true);
+
 // use express-ejs-layouts
 app.use(expressLayouts);
 
